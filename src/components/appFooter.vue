@@ -49,7 +49,7 @@ footer{
             height: 3rem;
             width: 9rem;
             font-weight: bold;
-            line-height: 3rem;
+            line-height: 3rem; 
             text-align: center;
             font-size: 1rem;
         }
