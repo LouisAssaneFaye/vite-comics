@@ -7,11 +7,10 @@
             <div>
                 <ul>
                     <li>FOLLOW US</li>
-                    <li><img src="../assets/img/footer-facebook.png" alt=""></li>
-                    <li><img src="../assets/img/footer-twitter.png" alt=""></li>
-                    <li><img src="../assets/img/footer-youtube.png" alt=""></li>
-                    <li><img src="../assets/img/footer-pinterest.png" alt=""></li>
-                    <li> <img src="../assets/img/footer-periscope.png" alt=""></li>
+                    <li v-for="li in footerList">
+                        <img src='li' alt="">
+                    </li>
+                    
                </ul>
            </div>
         </div>
@@ -23,6 +22,13 @@ export default {
     name:'appFooter',
     data(){
         return{
+            footerList: [
+                '../assets/img/footer-facebook.png',
+                '../assets/img/footer-twitter.png',
+                '../assets/img/footer-youtube.png',
+                '../assets/img/footer-pinterest.png',
+                '../assets/img/footer-periscope.png'
+            ]
 
         }
     },

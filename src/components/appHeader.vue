@@ -4,7 +4,7 @@
         <div class="header-up">
             <img src="../assets/img/dc-logo.png" alt="logo">
             <ul>
-                <li v-for="li in footerList">
+                <li v-for="li in headerList">
                     {{li}}
                 </li>
             </ul>
@@ -27,7 +27,7 @@ export default {
     name:'appHeader',
     data(){
         return{
-            footerList : [
+            headerList : [
                 'CHARACTERS',
                 'COMICS',
                 'MOVIES',
