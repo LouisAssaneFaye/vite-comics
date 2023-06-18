@@ -4,7 +4,7 @@
             <div class="main-up m-auto align-item-centered">
             <ul>
                 <li v-for="li in firstMainList" class="align-item-centered">
-                    <img src="" alt="">  
+                    <img src="../assets/img/{{li.icon}}" alt="">  
                     {{ li.text }}
                 </li>
             </ul>
@@ -77,27 +77,27 @@
                 
                 firstMainList:[
                     {
-                        icon:'../assets/img/buy-comics-digital-comics.png',
+                        icon:'buy-comics-digital-comics.png',
                         text:'DIGITAL COMICS',
 
                     },
                     {
-                        icon:'../assets/img/buy-comics-merchandise.png',
+                        icon:'buy-comics-merchandise.png',
                         text:'DC MERCHANDISE',
 
                     },
                     {
-                        icon:'../assets/img/buy-comics-subscriptions.png',
+                        icon:'buy-comics-subscriptions.png',
                         text:'SUBSCRIPTION',
 
                     },
                     {
-                        icon:'../assets/img/buy-comics-shop-locator.png',
+                        icon:'buy-comics-shop-locator.png',
                         text:'COMIC SHOP LOCATOR',
 
                     },
                     {
-                        icon:'../assets/img/buy-dc-power-visa.svg',
+                        icon:'buy-dc-power-visa.svg',
                         text:'DC POWER VISA',
 
                     }

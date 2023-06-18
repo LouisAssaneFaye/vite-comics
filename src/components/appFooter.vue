@@ -8,7 +8,7 @@
                 <ul>
                     <li>FOLLOW US</li>
                     <li v-for="li in footerList">
-                        <img src='li' alt="">
+                        <img src="../assets/img/{{li}}'" alt="">
                     </li>
                     
                </ul>
@@ -23,11 +23,11 @@ export default {
     data(){
         return{
             footerList: [
-                '../assets/img/footer-facebook.png',
-                '../assets/img/footer-twitter.png',
-                '../assets/img/footer-youtube.png',
-                '../assets/img/footer-pinterest.png',
-                '../assets/img/footer-periscope.png'
+                'footer-facebook.png',
+                'footer-twitter.png',
+                'footer-youtube.png',
+                'footer-pinterest.png',
+                'footer-periscope.png'
             ]
 
         }
