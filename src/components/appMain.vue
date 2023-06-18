@@ -3,11 +3,10 @@
         <div class="container-main-up">
             <div class="main-up m-auto align-item-centered">
             <ul>
-                <li class="align-item-centered"><img src="../assets/img/buy-comics-digital-comics.png" alt=""> DIGITAL COMICS </li>
-                <li class="align-item-centered"><img src="../assets/img/buy-comics-merchandise.png" alt=""> DC MERCHANDISE</li>
-                <li class="align-item-centered"><img src="../assets/img/buy-comics-subscriptions.png" alt=""> SUBSCRIPTION</li>
-                <li class="align-item-centered"><img src="../assets/img/buy-comics-shop-locator.png" alt=""> COMIC SHOP LOCATOR</li>
-                <li class="align-item-centered"><img src="../assets/img/buy-dc-power-visa.svg" alt=""> DC POWER VISA</li>
+                <li v-for="li in firstMainList" class="align-item-centered">
+                    <img src="" alt="">  
+                    {{ li.text }}
+                </li>
             </ul>
 
         </div>
@@ -19,13 +18,10 @@
                     <ul>
                     
                         <li class="title">DC COMICS</li>
-                        <li>Characters</li>
-                        <li>Comics</li>
-                        <li>Movies</li>
-                        <li>TV</li>
-                        <li>Games</li>
-                        <li>Videos</li>
-                        <li>News</li>
+                        <li v-for="li in secondMainList">
+                            {{li}}
+                        </li>
+                        
 
                     </ul>
                 </div>
@@ -34,8 +30,9 @@
                     <ul>
                     
                         <li class="title">SHOP</li>
-                        <li>Shop DC</li>
-                        <li>Shop DC Collectibles</li>
+                        <li v-for="li in thirdMainList">
+                            {{li}}
+                        </li>
 
                     </ul>
                 </div>
@@ -46,18 +43,10 @@
                 <ul>
                     
                     <li class="title">DC</li>
-                    <li>Terms Of Use</li>
-                    <li>Privacy policy (New)</li>
-                    <li>Ad Choices</li>
-                    <li>Advertising</li>
-                    <li> Jobs</li>
-                    <li>Subsciptions</li>
-                    <li>Talent Workshops</li>
-                    <li>CPSC Certicates</li>
-                    <li>Ratings</li>
-                    <li>Shop Help</li>
-                    <li>Contact Us</li>
-                    
+                    <li v-for="li in fourthMainList">
+                        {{li}}
+                    </li>
+
                 </ul>
 
             </div>
@@ -65,12 +54,9 @@
             <div class="main-down-right">
                 <ul>
                     <li class="title">SITES</li>
-                    <li>DC</li>
-                    <li>MAD Magazine</li>
-                    <li>DC Kids</li>
-                    <li>DC Universe</li>
-                    <li>DC Power Visa</li>
-                    
+                    <li v-for="li in fiveMainList">
+                        {{li}}
+                    </li>
                 </ul>
 
             </div>
@@ -88,6 +74,73 @@
         name:'appMain',
         data(){
             return{
+                
+                firstMainList:[
+                    {
+                        icon:'../assets/img/buy-comics-digital-comics.png',
+                        text:'DIGITAL COMICS',
+
+                    },
+                    {
+                        icon:'../assets/img/buy-comics-merchandise.png',
+                        text:'DC MERCHANDISE',
+
+                    },
+                    {
+                        icon:'../assets/img/buy-comics-subscriptions.png',
+                        text:'SUBSCRIPTION',
+
+                    },
+                    {
+                        icon:'../assets/img/buy-comics-shop-locator.png',
+                        text:'COMIC SHOP LOCATOR',
+
+                    },
+                    {
+                        icon:'../assets/img/buy-dc-power-visa.svg',
+                        text:'DC POWER VISA',
+
+                    }
+
+                ],
+                
+                secondMainList:[
+                    'Charcaters',
+                    'Comics',
+                    'Movies',
+                    'TV',
+                    'Games',
+                    'Videos',
+                    'News'
+                ],
+
+                thirdMainList: [
+                    'Shop DC',
+                    'Shop DC Collectibles'
+                ],
+
+                fourthMainList: [
+                    'Terms Of Use',
+                    'Privacy policy (New)',
+                    'Ad Choises',
+                    'Advertising',
+                    'Jobs',
+                    'Subscription',
+                    'Talent Workshops',
+                    'CPSC Certificates',
+                    'Ratings',
+                    'Shop',
+                    'Contact Us'
+                ],
+
+                fiveMainList:[
+                    'DC',
+                    'MAD Magazine',
+                    'DC Kids',
+                    'DC Universe',
+                    'DC Power Visa'
+                ]
+
 
             }
         },
@@ -191,7 +244,8 @@ main{
             li.title{
                 font-size: 0.8rem;
                 font-weight: bold;
-                    margin-bottom: 0.9rem;
+                margin-bottom: 0.9rem;
+                color: white;
             }
             li{
                 list-style-type: none;
