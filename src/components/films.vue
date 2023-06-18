@@ -1,5 +1,7 @@
-<template lang="">
-    <singleFilm v-for="film in filmList" />
+<template>
+    <singleFilm v-for="filmObj in filmList" 
+       :filmElement = 'filmObj'
+    />
 </template>
 <script>
 import singleFilm from './singleFilm.vue';
@@ -89,6 +91,6 @@ export default {
     
 }
 </script>
-<style lang="">
+<style lang="scss" scoped>
     
 </style>

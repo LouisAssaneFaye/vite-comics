@@ -109,10 +109,10 @@ header{
                     justify-content: space-between;
                     height: 320px;
                     width: 70%;
-                    border: 1px solid white;
                     div.product{
                         width: calc( 100% / 7 );
-                        height: 46%;
+                        margin-right: 10px;
+                        height: 47%;
                         overflow: hidden;
                         div.img{
                             height: 85%;
