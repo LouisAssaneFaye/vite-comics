@@ -12,9 +12,23 @@
         </div>
         
         <div class="header-down">
-            <span>
-                -- Content goes here --
-            </span>
+            
+            <div class="jumbotron">
+                <img src="../assets/img/jumbotron.jpg" alt="jumbo">
+            </div>
+            
+            <div class="container-product">
+                
+                <div class="products">
+                    
+                    <films />
+
+                </div>
+                
+                <span>
+                    LOAD MORE
+                </span>
+            </div>
 
         </div>
         
@@ -23,6 +37,7 @@
 
 
 <script>
+import films from './films.vue';
 export default {
     name:'appHeader',
     data(){
@@ -42,9 +57,9 @@ export default {
 
         }
     },
-    methods:{
-
-    } 
+    components: {
+        films
+    }
 }
 </script>
 
@@ -75,14 +90,67 @@ header{
     }
 
     div.header-down{
-            height: 70px;
+            width: 100%;
             background-color: $blackColor;
-            padding-top: 1.35rem;
-            padding-left: 14rem;
-            span {
+            div.jumbotron{
+                overflow:hidden;
+                height: 280px;
+                img{
+                     width: 100%;
+                }
+            }
+
+            div.container-product{
+                height: 400px;
+                @include flexThree();
+                div.products{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    height: 320px;
+                    width: 70%;
+                    border: 1px solid white;
+                    div.product{
+                        width: calc( 100% / 7 );
+                        height: 46%;
+                        overflow: hidden;
+                        div.img{
+                            height: 85%;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        div.description{
+                            display: flex;
+                            align-items: center;
+                            span{
+                                color: $whiteColor;
+                                font-size: 0.6rem;
+                                background-color: black;
+                            }
+                            
+                        }
+                        
+                        
+                        
+                        
+
+                    }
+                }
+                
+            }
+
+            span{
                 display: inline-block;
                 color: $whiteColor;
-                font-size: 1.6rem;
+                font-weight: bold;
+                font-size: 0.9rem;
+                background-color: $bluColor;
+                width: 12rem;
+                height: 2rem;
+                line-height: 2rem;
+                text-align: center;
+                
             }
         }
 }
